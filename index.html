@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Guess the color game</title>
+	</head>
+	<body>
+		<header>
+			<div class="round">
+				<span>Round</span>
+				<span class="round-count">1</span>
+			</div>
+			<div class="round-type">RGB</div>
+			<h1>Which color is <span class="color-text"></span> ?</h1>
+		</header>
+
+		<div class="menu">
+			<button class="new-colors remaining-3">New colors</button>
+			<div class="time">
+				<i class="far fa-clock"></i>
+				<span class="next-round">Next round in</span>
+				<span class="time-left">Time left: </span>
+				<span class="seconds-left">3</span>
+			</div>
+			<div class="lifes">
+				<span>Lifes remaining:</span>
+				<span class="life-count">3</span>
+			</div>
+		</div>
+
+		<main class="colors">
+			<div class="colors-container">
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+			</div>
+		</main>
+
+		<div class="game-over">
+			<div class="container">
+				<p class="result">You lost!</p>
+				<div class="last-round">
+					<span class="slash">/</span>
+					<span class="rounds">Round <span class="count">0</span></span>
+					<span class="slash">/</span>
+				</div>
+				<button class="new-game">Start new game</button>
+			</div>
+		</div>
+
+		<div class="win">
+			<div class="container">
+				<p class="result">You won!</p>
+				<div class="last-round">
+					<span class="slash">/</span>
+					<span class="rounds">Round 100</span>
+					<span class="slash">/</span>
+				</div>
+				<button class="new-game">Start new game</button>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
