@@ -6,52 +6,66 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
-		<title>Hangman game</title>
+		<title>Guess the color game</title>
 	</head>
 	<body>
-		<h1 class="title">Hangman game</h1>
+		<header>
+			<div class="round">
+				<span>Round</span>
+				<span class="round-count">1</span>
+			</div>
+			<div class="round-type">RGB</div>
+			<h1>Which color is <span class="color-text"></span> ?</h1>
+		</header>
 
-		<p class="description">Use the alphabet below or type a letter to guess the word!</p>
-
-		<div class="letters">
-			<div class="letter">a</div>
-			<div class="letter">b</div>
-			<div class="letter">c</div>
-			<div class="letter">d</div>
-			<div class="letter">e</div>
-			<div class="letter">f</div>
-			<div class="letter">g</div>
-			<div class="letter">h</div>
-			<div class="letter">i</div>
-			<div class="letter">j</div>
-			<div class="letter">k</div>
-			<div class="letter">l</div>
-			<div class="letter">m</div>
-			<div class="letter">n</div>
-			<div class="letter">o</div>
-			<div class="letter">p</div>
-			<div class="letter">q</div>
-			<div class="letter">r</div>
-			<div class="letter">s</div>
-			<div class="letter">t</div>
-			<div class="letter">u</div>
-			<div class="letter">v</div>
-			<div class="letter">w</div>
-			<div class="letter">x</div>
-			<div class="letter">y</div>
-			<div class="letter">z</div>
+		<div class="menu">
+			<button class="new-colors remaining-3">New colors</button>
+			<div class="time">
+				<i class="far fa-clock"></i>
+				<span class="next-round">Next round in</span>
+				<span class="time-left">Time left: </span>
+				<span class="seconds-left">3</span>
+			</div>
+			<div class="lifes">
+				<span>Lives remaining:</span>
+				<span class="life-count">3</span>
+			</div>
 		</div>
 
-		<div class="category">The chosen category is <span class="category__name"></span></div>
+		<main class="colors">
+			<div class="colors-container">
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+				<div class="color"></div>
+			</div>
+		</main>
 
-		<div class="solution"></div>
+		<div class="game-over">
+			<div class="container">
+				<p class="result">You lost!</p>
+				<div class="last-round">
+					<span class="slash">/</span>
+					<span class="rounds">Round <span class="count">0</span></span>
+					<span class="slash">/</span>
+				</div>
+				<button class="new-game">Start new game</button>
+			</div>
+		</div>
 
-		<div class="lives">You have <span class="life__count"></span> lives</div>
-
-		<div class="tipps"></div>
-
-		<i class="far fa-check-circle"></i>
-		<i class="far fa-times-circle"></i>
+		<div class="win">
+			<div class="container">
+				<p class="result">You won!</p>
+				<div class="last-round">
+					<span class="slash">/</span>
+					<span class="rounds">Round 100</span>
+					<span class="slash">/</span>
+				</div>
+				<button class="new-game">Start new game</button>
+			</div>
+		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/scripts.js"></script>
